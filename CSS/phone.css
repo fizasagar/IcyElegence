@@ -1,0 +1,125 @@
+/* Navigation */
+#navbar {
+    flex-direction: column;
+}
+
+#navbar ul li a {
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+}
+
+/* Home section */
+#home {
+    height: 370px;
+    padding: 3px 28px;
+}
+
+#home::before {
+    height: 480px;
+}
+
+#home p {
+    font-size: 13px;
+}
+
+/* Services section  */
+#collection {
+    flex-direction: column;
+}
+
+#collection .box {
+    padding: 14px;
+    margin: 2px 0px;
+    margin-bottom: 20px;
+}
+
+/* service section */
+#our-services {
+    flex-wrap: wrap;
+}
+
+#services img {
+    width: 66px;
+    padding: 6px;
+    height: auto;
+}
+
+/* About Us Section */
+#about-us {
+    flex-direction: column;
+    /* Stack about section items vertically */
+    padding: 20px;
+    /* Reduced padding */
+}
+
+.about-container {
+    max-width: 100%;
+    /* Full width on mobile */
+}
+
+.about-container h1 {
+    font-size: 2rem;
+    /* Smaller font size for mobile */
+}
+
+.about-container p {
+    font-size: 1rem;
+    /* Adjust paragraph font size */
+}
+
+.about-image {
+    max-width: 100%;
+    /* Full width on mobile */
+    text-align: center;
+    /* Center align image */
+}
+
+.about-image img {
+    width: 100%;
+    /* Ensure images are responsive */
+    border-radius: 15px;
+    /* Maintain rounded corners */
+}
+
+/* Mission & Vision Section */
+#mission-vision {
+    padding: 30px 10px;
+    /* Reduced padding for mobile */
+}
+
+#mission-vision h2 {
+    font-size: 1.5rem;
+    /* Smaller font size for mobile */
+}
+
+.mv-container {
+    flex-direction: column;
+    /* Stack mission/vision boxes vertically */
+    align-items: center;
+    /* Center align boxes */
+}
+
+.mv-container .box {
+    width: 90%;
+    /* Full width with some margin */
+    margin-bottom: 20px;
+    /* Space between boxes */
+}
+
+/* Contact us section */
+#contact-box form {
+    width: 80%;
+}
+
+/* Footer */
+
+/* Utility classes */
+.h-primary {
+    font-size: 26px;
+}
+
+.btn {
+    font-size: 13px;
+    padding: 4px 8px;
+}

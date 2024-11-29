@@ -1,0 +1,358 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0%;
+    left:0px;
+    height: 92%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 8px 34px;
+}
+
+#logo img{
+    height: 80px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: "Rowdies", sans-serif;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../img/bg.jpg') no-repeat center center/cover;
+    height: 665px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.85;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Collection Section */
+#collection {
+    margin: 34px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure it adapts to different screen sizes */
+    justify-content: center; /* Center the boxes */
+    gap: 20px; /* Add spacing between the boxes */
+}
+
+#collection .box {
+    border: 2px solid brown;
+    padding: 34px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+    opacity: 0;
+    transform: translateY(20px); /* Initial position for animation */
+    animation: fadeIn 0.8s ease forwards; /* Entrance animation */
+}
+
+#collection .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#collection .box p {
+    font-family: 'Bree Serif', serif;
+    text-align: center; /* Center the text */
+}
+
+/* Hover Effect for Boxes */
+#collection .box:hover {
+    transform: translateY(-10px); /* Move up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+
+/* Services Section */
+#our-services { 
+    position: relative;
+    padding: 30px;
+    text-align: center;
+}
+
+#our-services::before {
+    content: "";
+    position: absolute;
+    background: url('/img/bg.jpg') no-repeat center center / cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds spacing between items */
+}
+
+#services img {
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+#services img:hover {
+    transform: scale(1.1); /* Enlarges image slightly on hover */
+}
+
+/* About Us Section */
+#about-us {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-container {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Bree Serif', serif;
+}
+
+.about-container p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mission & Vision Section */
+#mission-vision {
+    background-color: #eaf0f1;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#mission-vision h2 {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 30px;
+    font-family: 'Bree Serif', serif;
+}
+
+.mv-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.mv-container .box {
+    background-color: #fff;
+    border: 2px solid #1abc9c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-container .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mv-container h3 {
+    color: #1abc9c;
+    margin-bottom: 10px;
+    font-family: 'Bree Serif', serif;
+}
+
+.mv-container p {
+    font-size: 1rem;
+    font-family: 'Bree Serif', serif;
+}
+
+
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+    margin-top: -1%;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('/img/bg.jpg') no-repeat center center/cover;}
+
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgba(173, 93, 62, 0.901);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
